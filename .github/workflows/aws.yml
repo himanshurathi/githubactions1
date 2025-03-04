@@ -16,12 +16,12 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_IDAWS_ACCESS_KEY_ID }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1 # Change this to your AWS region
 
       - name: Create S3 Bucket
         run: |
-          BUCKET_NAME=mygithubactionsbuckethere4march
+          BUCKET_NAME="mygithubactionsbuckethere4march"
           echo "Creating bucket: $BUCKET_NAME"
           aws s3 mb s3://$BUCKET_NAME
