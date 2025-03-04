@@ -24,4 +24,4 @@ jobs:
         run: |
           BUCKET_NAME="mygithubactionsbuckethere4march"
           echo "Creating bucket: $BUCKET_NAME"
-          aws s3 mb s3://$BUCKET_NAME
+          aws s3 cp index.html s3://$BUCKET_NAME
