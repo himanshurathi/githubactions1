@@ -1,0 +1,6 @@
+name: sc1
+
+on:
+    schedule:
+        - cron: '* * * * *'
+        
